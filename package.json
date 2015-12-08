@@ -2,13 +2,14 @@
   "name": "js-ddd",
   "version": "1.0.0",
   "description": "JS simple console logging like a Kint for php",
-  "main": "./src/ddd.js",
+  "main": "./dist/ddd.js",
   "scripts": {
+    "clean": "rm -rf ./example/build",
     "init": "npm install",
+    "release": "rm -rf ./dist; webpack --config webpack.config.dist.js",
     "start": "npm run clean; webpack",
     "start:hard": "rm -rf ./node_modules; npm run init; npm run start",
-    "watch": "npm run start; webpack-dev-server --hot --inline",
-    "clean": "rm -rf ./example/build"
+    "watch": "npm run start; webpack-dev-server --hot --inline"
   },
   "author": "Bogdan Bodnaruk",
   "license": "ISC",
