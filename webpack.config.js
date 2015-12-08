@@ -14,7 +14,7 @@ module.exports = {
 	resolve: {
 		root: path.resolve(__dirname, 'src/'),
 		modulesDirectories: ['node_modules'],
-		extensions: ['', '.js', '.scss', '.jsx']
+		extensions: ['', '.js', '.jsx']
 	},
 	plugins: [
 		new webpack.DefinePlugin({
@@ -40,16 +40,6 @@ module.exports = {
 				loaders: [
 					'react-hot',
 					'babel?presets[]=react,presets[]=es2015,presets[]=stage-0'
-				],
-				exclude: /node_modules/
-			},
-			{
-				test: /\.scss$/,
-				loaders: [
-					'style',
-					'css',
-					'autoprefixer-loader?browsers=last 2 version',
-					'sass?outputStyle=compressed',
 				],
 				exclude: /node_modules/
 			}
