@@ -20,6 +20,9 @@ config.plugins.push(
   new webpack.optimize.UglifyJsPlugin({
     compressor: {
       warnings: false
+    },
+    mangle: {
+      except: ['dd', 'ddd']
     }
   })
 );
