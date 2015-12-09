@@ -65,13 +65,7 @@ class DDD extends JS_DDD {
   }
 }
 
-export function ddd(params) {
-  if (process.env.ENV_VARIABLE !== 'production') {
-    return new DDD(params);
-  }
-}
-
-export function dd(params) {
+function dd(params) {
   if (process.env.ENV_VARIABLE !== 'production') {
     if (kindOf(params) !== 'object') {
       console.warn(' --- (DD has been fallen down to DDD) ---');
@@ -80,6 +74,14 @@ export function dd(params) {
     return new DD(params);
   }
 }
+
+function ddd(params) {
+  if (process.env.ENV_VARIABLE !== 'production') {
+    return new DDD(params);
+  }
+}
+
+export { dd, ddd };
 
 window.dd = dd;
 window.ddd = ddd;
