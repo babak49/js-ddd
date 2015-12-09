@@ -1,6 +1,6 @@
 {
   "name": "js-ddd",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "JS simple console logging like a Kint for php",
   "main": "./dist/ddd.js",
   "scripts": {
@@ -35,5 +35,14 @@
     "source-map-loader": "^0.1.5",
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.10.1"
-  }
+  },
+  "npmName": "js-ddd",
+  "npmFileMap": [
+    {
+      "basePath": "/dist/",
+      "files": [
+        "*.js"
+      ]
+    }
+  ]
 }
