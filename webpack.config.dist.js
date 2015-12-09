@@ -2,12 +2,16 @@ const webpack = require('webpack');
 const config = require('./webpack.config');
 const path = require('path');
 
-config.entry = path.resolve(__dirname, 'src/ddd.js');
-config.output = {
-  path: path.resolve(__dirname),
-  filename: 'index.js'
+config.devtool = '';
+config.entry = {
+  ddd: path.resolve(__dirname, 'src/ddd.js')
 };
-
+config.output = {
+  filename: 'index.js',
+  library: 'ddd',
+  libraryTarget: 'umd'
+};
+config.plugins = [];
 config.plugins.push(
   new webpack.optimize.OccurenceOrderPlugin()
 );
@@ -16,15 +20,12 @@ config.plugins.push(new webpack.DefinePlugin({
     'NODE_ENV': JSON.stringify('production')
   }
 }));
-config.plugins.push(
+ config.plugins.push(
   new webpack.optimize.UglifyJsPlugin({
     compressor: {
       warnings: false
-    },
-    mangle: {
-      except: ['module', 'dd', 'ddd']
     }
   })
-);
+ );
 
 module.exports = config;

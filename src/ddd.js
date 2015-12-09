@@ -81,8 +81,10 @@ function ddd(params) {
   }
 }
 
-module.exports = dd;
-module.exports = ddd;
+export {
+  dd,
+  ddd,
+};
 
 window.dd = dd;
 window.ddd = ddd;
