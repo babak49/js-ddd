@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rm -rf ./example/build",
     "init": "npm install",
-    "release": "rm -rf ./dist; webpack --config webpack.config.dist.js",
+    "prepublish": "rm -f ./index.js; webpack --config webpack.config.dist.js",
     "start": "npm run clean; webpack",
     "start:hard": "rm -rf ./node_modules; npm run init; npm run start",
     "watch": "npm run start; webpack-dev-server --hot --inline"

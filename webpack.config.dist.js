@@ -4,7 +4,7 @@ const path = require('path');
 
 config.entry = path.resolve(__dirname, 'src/ddd.js');
 config.output = {
-  path: path.resolve(__dirname, 'dist/'),
+  path: path.resolve(__dirname),
   filename: 'index.js'
 };
 
