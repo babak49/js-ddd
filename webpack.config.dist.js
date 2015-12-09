@@ -22,7 +22,7 @@ config.plugins.push(
       warnings: false
     },
     mangle: {
-      except: ['dd', 'ddd']
+      except: ['module', 'dd', 'ddd']
     }
   })
 );
