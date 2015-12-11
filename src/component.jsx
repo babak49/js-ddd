@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { dd, ddd } from './ddd';
+import './ddd';
 
 export class HotReloadComponent extends Component {
   render() {
