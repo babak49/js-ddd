@@ -4,6 +4,8 @@ This package created to help you to use browser console more intelligent and you
 You can use just __*dd()*__ for console table your object or __*ddd()*__ for everything else.  
 Demo on the attached screenshot.
 
+![js-ddd](https://cloud.githubusercontent.com/assets/1406146/11750510/5e2ec53a-a03c-11e5-8acd-ec8e026f6f52.png)
+
 ### Installing
     npm install --save js-ddd
     
